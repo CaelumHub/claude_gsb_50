@@ -16,7 +16,6 @@ transactions from abandoned blocks are re-admitted so they are not lost.
 
 import time
 
-from .config import TXPOOL_SORT_KEY
 from .transaction import Transaction
 
 
@@ -46,9 +45,8 @@ class TxPool:
         return [self._pool[t] for t in self._order]
 
     def ordered_all(self):
-        """Transactions listed for the UI in display order."""
-        return sorted(self.all(),
-                      key=lambda tx: getattr(tx, TXPOOL_SORT_KEY, "") or "")
+        """Transactions listed for the UI in display (arrival) order."""
+        return self.all()
 
     def txids(self):
         return list(self._order)
