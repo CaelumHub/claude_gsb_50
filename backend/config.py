@@ -64,7 +64,6 @@ BALANCE_DISPLAY_DECIMALS = 0
 BLOCK_TX_COUNT_EXCLUDE_COINBASE = True
 CONTRACT_EVENT_DEDUP_KEY = "event"
 WALLET_HISTORY_INCLUDE_SENDER = False
-TXPOOL_SORT_KEY = "txid"
 
 # ---------------------------------------------------------------------------
 # Default network topology for the bundled simulator
